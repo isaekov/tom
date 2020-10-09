@@ -1,9 +1,10 @@
 package com.boomroomtoomtoom.blog.controllers.admin;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+@Controller("adminPost")
 @RequestMapping("/admin")
 public class PostController {
 
@@ -12,25 +13,28 @@ public class PostController {
         return "admin/post-list";
     }
 
-    @GetMapping(value = "/statistic")
-    public String statistic() {
-        return "/admin/statistic";
-    }
     @GetMapping(value = "/drafts")
     public String postListDraft() {
-        return null;
+        return "admin/draft-list";
     }
-    @PostMapping
+
+    @GetMapping("/create")
     public String create() {
-        return null;
+        return "admin/create";
     }
+
+    @PostMapping("/create")
+    public String create(Model model) {
+        return "admin/create";
+    }
+
     @GetMapping(value = "/{id}")
     public String postById(@PathVariable String id) {
         return null;
     }
     @PutMapping(value = "/{id}")
     public String edit(@PathVariable String id) {
-        return null;
+        return "admin/update";
     }
     @DeleteMapping(value = "/{id}")
     public String delete(@PathVariable String id) {

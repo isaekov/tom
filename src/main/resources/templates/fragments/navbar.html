@@ -31,7 +31,7 @@
                                 <li><!-- start message -->
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                            <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                         </div>
                                         <h4>
                                             Support Team
@@ -44,7 +44,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                            <img src="/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                                         </div>
                                         <h4>
                                             AdminLTE Design Team
@@ -56,7 +56,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                            <img src="/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                                         </div>
                                         <h4>
                                             Developers
@@ -68,7 +68,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                            <img src="/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                                         </div>
                                         <h4>
                                             Sales Department
@@ -80,7 +80,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                            <img src="/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                                         </div>
                                         <h4>
                                             Reviewers
@@ -112,7 +112,8 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                                        <i class="fa fa-warning text-yellow"></i> Very long description here that may
+                                        not fit into the
                                         page and may cause design problems
                                     </a>
                                 </li>
@@ -144,21 +145,16 @@
                     </a>
                 </li>
                 <!-- User Account: style can be found in dropdown.less -->
-                <!-- Control Sidebar Toggle Button -->
 
             </ul>
         </div>
-
     </nav>
 </header>
-
 <aside xmlns:th="http://www.thymeleaf.org" th:fragment="navbar" class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-        <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
                 <p>Alexander Pierce</p>
@@ -167,8 +163,8 @@
         </div>
         <ul class="sidebar-menu" data-widget="tree">
             <li>
-                <a th:href="@{/admin/statistic}">
-                    <i class="fa fa-th"></i> <span>Posts</span>
+                <a th:href="@{/admin}">
+                    <i class="fa fa-th"></i> <span>Statistics</span>
                     <span class="pull-right-container"></span>
                 </a>
             </li>
@@ -185,7 +181,7 @@
                 </a>
             </li>
             <li>
-                <a th:href="@{admin/new-post}">
+                <a th:href="@{/admin/create}">
                     <i class="fa fa-th"></i> <span>New post</span>
                     <span class="pull-right-container"></span>
                 </a>
