@@ -1,19 +1,22 @@
 package com.boomroomtoomtoom.blog.controllers.admin;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.*;
 
-@Controller(value = "/admin")
+@Controller
+@RequestMapping("/admin")
 public class PostController {
 
-    @GetMapping
+    @GetMapping(value = "/posts")
     public String postList() {
-        return null;
+        return "admin/post-list";
     }
-    @GetMapping
+
+    @GetMapping(value = "/statistic")
+    public String statistic() {
+        return "/admin/statistic";
+    }
+    @GetMapping(value = "/drafts")
     public String postListDraft() {
         return null;
     }
@@ -21,20 +24,20 @@ public class PostController {
     public String create() {
         return null;
     }
-    @GetMapping
-    public String postById() {
+    @GetMapping(value = "/{id}")
+    public String postById(@PathVariable String id) {
         return null;
     }
-    @PutMapping
-    public String edit() {
+    @PutMapping(value = "/{id}")
+    public String edit(@PathVariable String id) {
         return null;
     }
-    @DeleteMapping
-    public String delete() {
+    @DeleteMapping(value = "/{id}")
+    public String delete(@PathVariable String id) {
         return null;
     }
-    @PostMapping
-    public String isDraft() {
+    @PutMapping(value = "is-draft/{id}")
+    public String isDraft(@PathVariable String id) {
         return null;
     }
 
