@@ -8,81 +8,86 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
     <div th:replace="fragments/navbar"></div>
+
     <div class="content-wrapper">
         <section class="content">
-            <div class="col-md-12">
-                <div class="box box-danger">
-                    <div class="box-header">
-                        <h3 class="box-title">Разное</h3>
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Категории</h3>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                                title="Collapse">
+                            <i class="fa fa-minus"></i></button>
                     </div>
-                    <div class="box-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Категория</label>
-                                    <select class="form-control select2" style="width: 100%;">
-                                        <option selected="selected">Alabama</option>
-                                        <option>Alaska</option>
-                                        <option>California</option>
-                                        <option>Delaware</option>
-                                        <option>Tennessee</option>
-                                        <option>Texas</option>
-                                        <option>Washington</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Tag</label>
-                                    <select class="form-control select2" multiple="multiple"
-                                            data-placeholder="Select a State"
-                                            style="width: 100%;">
-                                        <option>Alabama</option>
-                                        <option>Alaska</option>
-                                        <option>California</option>
-                                        <option>Delaware</option>
-                                        <option>Tennessee</option>
-                                        <option>Texas</option>
-                                        <option>Washington</option>
-                                    </select>
-                                </div>
-                            </div>
+                </div>
+                <div class="box-body">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Категория</label>
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected">Alabama</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Tag</label>
+                            <select class="form-control select2" multiple="multiple"
+                                    data-placeholder="Select a State"
+                                    style="width: 100%;">
+                                <option>Alabama</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-12">
-                <div class="box box-danger">
-                    <div class="box-header">
-                        <h3 class="box-title">Редактор</h3>
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Блог</h3>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                                title="Collapse">
+                            <i class="fa fa-minus"></i></button>
                     </div>
+                </div>
+                <div class="box-body">
                     <div class="box-body">
                         <div class="form-group">
                             <label>Заголовок</label>
                             <input type="text" class="form-control" name="title">
                         </div>
                         <div class="form-group">
-                                                    <textarea id="post" name="post" class="form-control"></textarea>
-                        </div>
-
-                    </div>
-                    <div class="box-footer">
-                        <div class="pull-left">
-                            <button type="button" class="btn btn-default" id="draftBt"><i class="fa fa-pencil"></i>
-                                Сохранить черновик
-                            </button>
-                            <button type="button" class="btn btn-success" id="pubBt"><i class="fa fa-envelope-o"></i>
-                                Опубликовать
-                            </button>
+                            <label>Cтатья</label>
+                            <textarea id="post" name="post" class="form-control"></textarea>
                         </div>
                     </div>
                 </div>
-
+                <div class="box-footer">
+                    <div class="pull-left">
+                        <button type="button" class="btn btn-default" id="draftBt"><i class="fa fa-pencil"></i>
+                            Сохранить черновик
+                        </button>
+                        <button type="button" class="btn btn-success" id="pubBt"><i class="fa fa-envelope-o"></i>
+                            Опубликовать
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
+
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
             <b>Version</b> 2.0
