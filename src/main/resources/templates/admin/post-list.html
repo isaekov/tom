@@ -6,7 +6,23 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div th:replace="fragments/navbar"></div>
 <div class="content-wrapper">
-post
+    <section class="content">
+            <div class="box" th:each="post : ${posts}">
+                <div class="box-header">
+                    <h3 class="box-title">Info Box</h3>
+                </div>
+                <div class="box-body">
+                    <p>
+                        amber, microbrewery abbey hydrometer, brewpub ale lauter tun saccharification oxidized barrel.
+                    </p>
+                </div>
+                <div class="box-footer">
+                    <a class="btn btn-success btn-xs">читать пост</a>
+                    <a class="btn btn-primary btn-xs" th:href="@{'/admin/edit/' + ${post}}">редактировать</a>
+                    <a class="btn btn-danger btn-xs">удалить</a>
+                </div>
+            </div>
+    </section>
 </div>
 <div th:replace="fragments/footer"></div>
 </body>

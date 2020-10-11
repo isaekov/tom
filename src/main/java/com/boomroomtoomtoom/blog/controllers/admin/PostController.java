@@ -9,7 +9,12 @@ import org.springframework.web.bind.annotation.*;
 public class PostController {
 
     @GetMapping(value = "/posts")
-    public String postList() {
+    public String postList(Model model) {
+        String[] posts = {
+                "Africa", "Antarctica"
+        };
+        model.addAttribute("posts", posts);
+
         return "admin/post-list";
     }
 
@@ -31,6 +36,10 @@ public class PostController {
     @GetMapping(value = "/{id}")
     public String postById(@PathVariable String id) {
         return null;
+    }
+    @GetMapping(value = "/edit/{id}")
+    public String postEditById(@PathVariable String id) {
+        return "admin/create";
     }
     @PutMapping(value = "/{id}")
     public String edit(@PathVariable String id) {
