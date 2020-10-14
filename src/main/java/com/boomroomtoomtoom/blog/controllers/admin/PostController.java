@@ -1,12 +1,23 @@
 package com.boomroomtoomtoom.blog.controllers.admin;
 
+import com.boomroomtoomtoom.blog.entity.Category;
+import com.boomroomtoomtoom.blog.entity.Post;
+import com.boomroomtoomtoom.blog.repository.PostRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 @Controller("adminPost")
 @RequestMapping("/admin")
 public class PostController {
+
+    private PostRepository postRepository;
 
     @GetMapping(value = "/posts")
     public String postList(Model model) {
@@ -29,7 +40,9 @@ public class PostController {
     }
 
     @PostMapping("/create")
-    public String create(Model model) {
+    public String create(@Valid Post post, Errors errors, Model model, @RequestParam("category") Category category) {
+        post.setCategory(category);
+        postRepository.save(post);
         return "admin/create";
     }
 

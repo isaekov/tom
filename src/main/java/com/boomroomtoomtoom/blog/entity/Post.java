@@ -1,6 +1,8 @@
 package com.boomroomtoomtoom.blog.entity;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -10,7 +12,8 @@ import java.util.Date;
 
 @Entity
 @Table(name="posts")
-
+@Getter
+@Setter
 public class Post {
 
     @Id
